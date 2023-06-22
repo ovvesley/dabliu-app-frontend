@@ -20,7 +20,7 @@ function DabliuContextProvider(props) {
     setLoginState(loginStateStorage);
 
 
-    history.push("/admin/dashboard");
+    history.push("/admin/me");
    
   }, []);
 

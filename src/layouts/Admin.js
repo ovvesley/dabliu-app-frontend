@@ -10,25 +10,26 @@ import FooterAdmin from "components/Footers/FooterAdmin.js";
 
 // views
 
-import Dashboard from "views/admin/Dashboard.js";
-import Maps from "views/admin/Maps.js";
+
 import Settings from "views/admin/Settings.js";
-import Tables from "views/admin/Tables.js";
+import Finance from "views/admin/Finance";
+import Files from "views/admin/Files";
+import Me from "views/admin/Me";
 
 export default function Admin() {
   return (
     <>
       <Sidebar />
       <div className="relative md:ml-64 bg-blueGray-100">
-        <AdminNavbar />
+        {/* <AdminNavbar /> */}
         {/* Header */}
         <HeaderStats />
-        <div className="px-4 md:px-10 mx-auto w-full -m-24">
+        <div className="px-4 md:px-10 mx-auto w-full">
           <Switch>
-            <Route path="/admin/dashboard" exact component={Dashboard} />
-            <Route path="/admin/maps" exact component={Maps} />
+            <Route path="/admin/me" exact component={Me} />
+            <Route path="/admin/finance" exact component={Finance} />
             <Route path="/admin/settings" exact component={Settings} />
-            <Route path="/admin/tables" exact component={Tables} />
+            <Route path="/admin/files" exact component={Files} />
             {/* <Redirect from="/admin" to="/admin/dashboard" /> */}
           </Switch>
           <FooterAdmin />
